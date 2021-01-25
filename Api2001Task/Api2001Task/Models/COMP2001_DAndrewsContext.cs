@@ -12,12 +12,13 @@ namespace Api2001Task.Models
         {
         }
 
-        public COMP2001_DAndrewsContext(DbContextOptions<COMP2001_DAndrewsContext> options)
-            : base(options)
+        public virtual DbSet<User> Users { get; set; }
+
+        public COMP2001_DAndrewsContext(DbContextOptions<COMP2001_DAndrewsContext> options) : base(options)
         {
         }
 
-        public virtual DbSet<User> Users { get; set; }
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
